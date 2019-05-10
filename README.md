@@ -24,34 +24,46 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+- [x] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+  By definition, React JS is a JavaScript Library created by Facebook to help deal with state problems.
+  By function, it focuses on resolving issues or limitations around DOMs by helping to create Virtual DOMs.
+  It also adds flexibility in how the user codes or words everything. 
 
-- [ ] What does it mean to _think_ in react?
+- [x] What does it mean to _think_ in react?
+  In short it means to think about the app and the process while you're building it step by step.
+  The mentality can be summarized in 5 tiers. (Reference source from https://reactjs.org/docs/thinking-in-react.html)
+  1. Break the UI into components 
+  2. Build a static version of how it should be
+  3. Think of an MVP representation of the app
+  4. Locate where the State should be
+  5. Add inverse data flow
 
-- [ ] Describe state.
+- [x] Describe state.
+  State is an object that decides how a component will render or function.
 
-- [ ] Describe props.
+- [x] Describe props.
+  Props are a tool in which information or data is passed from a parent component to a child component.
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!)
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Change directories into `./starwars` (`cd starwars`) and run `yarn install` to retrieve all needed dependencies.
-- [ ] Once you have installed the _node_modules_, run `yarn start or` to get your server up and running.
-- [ ] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
+- [x] Create a forked copy of this project.
+- [x] Add PM as collaborator on Github.
+- [x] Clone your OWN version of Repo (Not Lambda's by mistake!)
+- [x] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [x] Change directories into `./starwars` (`cd starwars`) and run `yarn install` to retrieve all needed dependencies.
+- [x] Once you have installed the _node_modules_, run `yarn start or` to get your server up and running.
+- [x] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
 Follow these steps for completing your project.
-- [ ] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [x] Implement the project on this Branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
-- [ ] Add your Project Manager as a Reviewer on the Pull-request.
-- [ ] PM then will count the HW as done by  merging the branch back into master.
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [x] Add your Project Manager as a Reviewer on the Pull-request.
+- [x] PM then will count the HW as done by  merging the branch back into master.
 
 Please note:
 
@@ -103,24 +115,3 @@ Required best practices:
 
 
 It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) than one that attempts too much and fails.
-
-## Stretch Problems
-
-- [ ] Build a pagination system that will allow you to load the next page of data
-
-- Take note on the data that's coming back from the server call in our `getCharacters()`.
-- console.log() the data coming back from the server.
-- Notice that there are `next` `previous` fields that give you a URL.
-- You have a function that will get chars called `getCharacters` you'll want to just call this function and supply it with the proper fields. You'll need to set this up on state to do this.
-
-```js
- .then(data => {
-    console.log(data); <-- Log data here to find the fields you will need.
-    this.setState({ starwarsChars: data.results });
-  })
-```
-
-- [ ] Build another app from scratch that looks very similar to this one. Inside of your main `App` component fetch some data in this same fashion from this url `https://dog.ceo/dog-api/#all` you'll have to follow the documentation at that website and figure out how to change up the code you've seen here in this Star Wars app in order to properly fetch the data and store it on Component State.
-
-- Be mindful of the `fetch API` that is now built into most modern browsers [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
-- Your data coming back from Dogs should be formatted in JSON format.
