@@ -30,12 +30,20 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.state.starwarsChars);
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        {this.state.starwarsChars.map(x => {
+          return (
+            <div style={{ background: 'white', width: '50%', margin: 'auto'}}>
+              <h3>{x.name}</h3>
+              <h4>{x.hair_color}</h4>
+            </div>
+          )
+        })}
       </div>
     );
   }
 }
-
 export default App;
