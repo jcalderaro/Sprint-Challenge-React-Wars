@@ -24,18 +24,18 @@ class App extends Component {
       .catch(err => {
         throw new Error(err);
       });
-  };
+  };  
 
   render() {
     console.log(this.state.starwarsChars);
     return (
       <div className="App">
-        <h1 className="Header">React Wars</h1>
+        <h1 className="Header">Star Wars Hall of Fame</h1>
         {this.state.starwarsChars.map(x => {
           return (
             <div style={{ background: 'white', width: '50%', margin: 'auto'}}>
               <h3 className="starWars">{x.name}</h3>
-              <h4>{x.hair_color}</h4>
+              <h4 className="traits"> Hair Color: {x.hair_color} Gender: {x.gender} Height: {x.height} </h4>
             </div>
           )
         })}

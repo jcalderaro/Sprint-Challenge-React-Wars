@@ -21,3 +21,4 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [x] Describe props.
   Props are a tool in which information or data is passed from a parent component to a child component.
+  
