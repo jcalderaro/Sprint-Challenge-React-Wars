@@ -37,7 +37,7 @@ class App extends Component {
         {this.state.starwarsChars.map(x => {
           return (
             <div style={{ background: 'white', width: '50%', margin: 'auto'}}>
-              <h3>{x.name}</h3>
+              <h3 className="starWars">{x.name}</h3>
               <h4>{x.hair_color}</h4>
             </div>
           )
@@ -45,6 +45,6 @@ class App extends Component {
       </div>
     );
   }
-  
+
 }
 export default App;
