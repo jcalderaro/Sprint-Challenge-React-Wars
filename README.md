@@ -38,10 +38,10 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
   4. Locate where the State should be
   5. Add inverse data flow
 
-- [x] Describe state.
+- [ ] Describe state.
   State is an object that decides how a component will render or function.
 
-- [x] Describe props.
+- [ ] Describe props.
   Props are a tool in which information or data is passed from a parent component to a child component.
 
 ## Project Set Up
