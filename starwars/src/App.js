@@ -1,49 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
+import Header from "./components/Header";
+import DataCall from "./components/DataCall";
+import { Global } from "./components/Styles";
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      starwarsChars: []
-    };
-  }
+const App = () => {
 
-  componentDidMount() {
-    this.getCharacters('https://swapi.co/api/people/');
-  }
-
-  getCharacters = URL => {
-    fetch(URL)
-      .then(res => {
-        return res.json();
-      })
-      .then(data => {
-        this.setState({ starwarsChars: data.results });
-      })
-      .catch(err => {
-        throw new Error(err);
-      });
-  };  
-
-  render() {
-    console.log(this.state.starwarsChars);
-    return (
-      <div className="App">
-        <h1 className="Header">Star Wars Hall of Fame</h1>
-        {this.state.starwarsChars.map(x => {
-          return (
-            <div style={{ background: 'white', width: '50%', margin: 'auto'}}>
-              <h3 className="starWars">{x.name}</h3>
-              <h4 className="traits"> Hair Color: {x.hair_color} Gender: {x.gender} Height: {x.height} </h4>
-            </div>
-          )
-        })}
-      </div>
-    );
-  }
-
+  return (
+    <div className="App">
+      <h1 className="Header">React Wars</h1>
+      <h1 className="starHeader">SW API Data </h1>
+      <Header />
+      <Global>
+      <DataCall />
+      </Global>
+    </div>
+  );
 }
-export default App;
 
-/* ------------- */
+export default App;
